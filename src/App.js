@@ -18,12 +18,19 @@ export default () => {
         <Container>
             <Menu>
                 <MenuItem icon="/assets/logo.png" link="/"/>
+                <MenuItem icon="/assets/food.png" link="/food"/>
                 <MenuItem icon="/assets/profile.png" link="/profile"/>
             </Menu>
             <Pagebody>
             <Switch>
                 <Route exact path="/">
                     <HomeScreen />
+                </Route>
+                <Route path ="/food">
+                    <div>Receitas</div>
+                </Route>
+                <Route path ="/profile">
+                    <div>Perfil</div>
                 </Route>
                 <Route path="/tela2/:nome">
                     <Tela2Screen />
