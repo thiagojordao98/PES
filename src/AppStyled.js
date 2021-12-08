@@ -3,7 +3,8 @@ import styled from "styled-components";
 export const Container = styled.div`
 display:flex;
 height: 100vh;
-background-color: #fff
+background-color: #0FC684
+
 `;
 
 export const Menu = styled.div`
@@ -15,8 +16,9 @@ width: 80px;
 flex-direction: column;
 `;
 
-export const Pagebody = styled.div`
+export const PageBody = styled.div`
 display:flex;
-background-color: #0000FF
+background-color: #0FC684;
+background-image: url('./assets/bg3.png');
 flex: 1;
 `;

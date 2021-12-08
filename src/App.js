@@ -2,13 +2,14 @@ import React from 'react';
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import { useSelector } from 'react-redux';
 
-import {Container, Menu, Pagebody} from './AppStyled';
+import {Container, Menu, PageBody} from './AppStyled';
 
 import HomeScreen from './pages/HomeScreen';
 import Tela2Screen from './pages/Tela2Screen';
 
-import MenuItem from './components/MenuItem';
 import PrivateRouter from './components/PrivateRouter';
+import MenuItem from './components/MenuItem';
+import Cart from './components/Cart';
 
 export default () => {
     const name = useSelector(state => state.user.name);
@@ -22,7 +23,7 @@ export default () => {
                 <MenuItem icon="/assets/food.png" link="/food"/>
                 <MenuItem icon="/assets/profile.png" link="/profile"/>
             </Menu>
-            <Pagebody>
+            <PageBody>
             <Switch>
                 <Route exact path="/">
                     <HomeScreen />
@@ -37,7 +38,8 @@ export default () => {
                     <Tela2Screen />
                 </Route>
             </Switch>
-            </Pagebody>
+            </PageBody>
+        <Cart />
         </Container>
         </BrowserRouter>
     );
